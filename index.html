@@ -256,7 +256,11 @@
       50%  { box-shadow: 0 6px 28px rgba(239,68,68,.4), 0 0 0 14px rgba(239,68,68,0); transform: scale(1.04); }
       100% { box-shadow: 0 4px 18px rgba(239,68,68,.5), 0 0 0 0 rgba(239,68,68,.6); transform: scale(1); }
     }
-    .btn-cta { animation: ctaPulse 1.6s ease-in-out infinite; }
+    @keyframes pulse-btn {
+      0%, 100% { transform: scale(1); }
+      50%       { transform: scale(1.05); }
+    }
+    .btn-cta { animation: pulse-btn 1.5s ease-in-out infinite; }
     .btn-cta:hover, .btn-cta:focus { animation: none; }
 
     .btn-cta .price-tag {
