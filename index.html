@@ -57,7 +57,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Fraunces:ital,wght@0,700;0,900;1,900&display=swap" rel="stylesheet" />
-  <script type="text/javascript">function importHotmart(){ var imported = document.createElement('script'); imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; document.head.appendChild(imported); var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; document.head.appendChild(link); } importHotmart();</script>
+  <script type="text/javascript">
+    function isInAppBrowser() {
+      var ua = navigator.userAgent || '';
+      return /Instagram|FBAN|FBAV|FB_IAB/.test(ua);
+    }
+    function importHotmart(){ var imported = document.createElement('script'); imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; document.head.appendChild(imported); var link = document.createElement('link'); link.rel = 'stylesheet'; link.type = 'text/css'; link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; document.head.appendChild(link); }
+    if (!isInAppBrowser()) { importHotmart(); }
+  </script>
 
   <style>
     /* ── RESET & TOKENS ── */
@@ -1314,6 +1321,17 @@
           content_category: source
         });
       }
+    }
+
+    // ── In-app browser (Instagram / Facebook): abre checkout diretamente ──
+    if (isInAppBrowser()) {
+      var CHECKOUT_URL = 'https://pay.hotmart.com/A103851615O?checkoutMode=2';
+      document.querySelectorAll('.hotmart__button-checkout').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.open(CHECKOUT_URL, '_blank');
+        });
+      });
     }
 
     // ── Hide sticky CTA when price section is visible ──
