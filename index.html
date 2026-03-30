@@ -153,6 +153,16 @@
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       pointer-events: none;
     }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, #ffffff);
+      pointer-events: none;
+    }
 
     .hero-badge {
       display: inline-block;
@@ -925,16 +935,21 @@
   <section class="hero">
     <div class="container">
 
-      <h1>Aprenda a Criar <em>Flores & Jarrinhos Encantadores</em> com Limpadores de Cachimbo 🌸</h1>
+      <div class="hero-badge">⭐ +600 alunas satisfeitas</div>
 
+      <h1>Aprenda a Criar <em>Flores & Jarrinhos Encantadores</em> com Limpadores de Cachimbo 🌸</h1>
 
       <div class="hero-img-wrap">
         <img src="capasite.jpg" alt="Flores e jarrinhos de limpador de cachimbo" loading="lazy" />
       </div>
 
+      <p style="font-size:1.1rem;font-weight:700;color:#F9A8D4;margin:0 auto 1.5rem;max-width:460px;line-height:1.5;text-shadow:0 1px 6px rgba(0,0,0,.3);">
+        Mesmo sem experiência, sem talento especial — você cria a sua primeira flor ainda essa semana 🌸
+      </p>
+
       <div class="btn-wrapper">
-        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" id="cta-hero" onclick="trackCTA('hero');return false;">
-          🛒 QUERO ME MATRICULAR AGORA
+        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" id="cta-hero" style="animation:ctaPulse 2s ease-in-out infinite;" onclick="trackCTA('hero');">
+          🌸 QUERO COMEÇAR A CRIAR AGORA
           <span class="price-tag">apenas R$ 17,90 — acesso imediato</span>
         </a>
       </div>
@@ -944,7 +959,7 @@
   <!-- ══════════════════════════════════════════
        SEÇÃO 1 — O QUE VOCÊ VAI APRENDER
   ══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section" style="background:linear-gradient(180deg,#7C3AED 0%,#ffffff 18%);">
     <div class="container">
       <div class="section-banner banner-green">
         Veja na prática como é simples Fazer 😊👇
@@ -964,7 +979,7 @@
       </div>
 
       <div class="btn-wrapper">
-        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" onclick="trackCTA('sec1');return false;">
+        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" onclick="trackCTA('sec1');">
           🌸 QUERO APRENDER TUDO ISSO!
           <span class="price-tag">R$ 17,90 — acesso vitalício</span>
         </a>
@@ -1004,8 +1019,15 @@
 
         <!-- Image -->
         <div style="padding:0 1.2rem;">
-          <img src="customaterial.png" alt="Material utilizado no curso" loading="lazy"
+          <img src="precomaterial.png" alt="Material utilizado no curso" loading="lazy"
                style="width:100%;border-radius:12px;display:block;box-shadow:0 4px 20px rgba(0,0,0,.4);" />
+        </div>
+
+        <!-- Custo destaque -->
+        <div style="margin:1rem 1.2rem 0;background:linear-gradient(135deg,#ffe600,#ffb300);border-radius:14px;padding:1rem 1.2rem;text-align:center;">
+          <p style="margin:0 0 .15rem;font-size:.75rem;font-weight:800;color:#1a0a2e;letter-spacing:.08em;text-transform:uppercase;">💰 Investimento no material</p>
+          <p style="margin:0;font-size:2rem;font-weight:900;color:#1a0a2e;line-height:1.1;">Menos de <span style="font-size:2.5rem;">R$20</span></p>
+          <p style="margin:.2rem 0 0;font-size:.82rem;font-weight:700;color:#3d2400;">para começar a criar suas primeiras flores!</p>
         </div>
 
         <!-- Bullets -->
@@ -1013,11 +1035,9 @@
           <div style="display:flex;align-items:center;gap:.7rem;color:#e0d4f7;font-size:.88rem;">
             <span style="color:#4ade80;font-size:1rem;flex-shrink:0;">✔</span> Rende mais de 15 flores
           </div>
-<div style="display:flex;align-items:center;gap:.7rem;color:#e0d4f7;font-size:.88rem;">
+          <div style="display:flex;align-items:center;gap:.7rem;color:#e0d4f7;font-size:.88rem;">
             <span style="color:#4ade80;font-size:1rem;flex-shrink:0;">✔</span> Flores que duram <strong style="color:#fff;">anos</strong> sem murchar
           </div>
-          <div style="display:flex;align-items:center;gap:.7rem;color:#e0d4f7;font-size:.88rem;">
-            <span style="color:#4ade80;font-size:1rem;flex-shrink:0;">✔</span> O curso ensina exatamente o que comprar e onde
           </div>
         </div>
 
@@ -1071,6 +1091,143 @@
     </div>
   </section>
 
+
+  <!-- ══════════════════════════════════════════
+       SEÇÃO — QUEM É A CARLA
+  ══════════════════════════════════════════ -->
+  <section style="background:linear-gradient(160deg,#1a0a2e 0%,#2d1b4e 60%,#3d2460 100%);padding:3rem 1rem;overflow:hidden;">
+    <div style="max-width:480px;margin:0 auto;">
+
+      <!-- Título -->
+      <div style="text-align:center;margin-bottom:1.75rem;">
+        <span style="display:inline-block;background:rgba(255,230,0,.15);color:#ffe600;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;border:1px solid rgba(255,230,0,.3);margin-bottom:.9rem;">
+          👩‍🎨 Quem vai te ensinar
+        </span>
+        <h2 style="color:#fff;font-family:'Fraunces',serif;font-size:1.7rem;font-weight:900;line-height:1.2;margin:0;">
+          Conheça a <em style="color:#F9A8D4;font-style:italic;">Carla</em>
+        </h2>
+      </div>
+
+      <!-- Carrossel -->
+      <div id="prof-carousel" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.5);margin-bottom:1.5rem;aspect-ratio:4/5;background:#2d1b4e;">
+
+        <!-- Slides -->
+        <div id="prof-slides" style="display:flex;height:100%;transition:transform .45s cubic-bezier(.4,0,.2,1);">
+          <div style="min-width:100%;height:100%;">
+            <img src="prof.jpg" alt="Carla com flores de limpador de cachimbo" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          </div>
+          <div style="min-width:100%;height:100%;">
+            <img src="02prof.jpg" alt="Carla com arranjos florais" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          </div>
+          <div style="min-width:100%;height:100%;">
+            <img src="03prof.jpg" alt="Carla e seus trabalhos" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          </div>
+          <div style="min-width:100%;height:100%;">
+            <img src="04prof.jpg" alt="Carla ensinando artesanato" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"/>
+          </div>
+        </div>
+
+        <!-- Setas -->
+        <button onclick="moveCarousel(-1)" aria-label="Anterior" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:none;color:#fff;font-size:1.3rem;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);z-index:2;">‹</button>
+        <button onclick="moveCarousel(1)" aria-label="Próxima" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border:none;color:#fff;font-size:1.3rem;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);z-index:2;">›</button>
+
+        <!-- Overlay gradiente inferior -->
+        <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,rgba(26,10,46,.7),transparent);pointer-events:none;"></div>
+      </div>
+
+      <!-- Dots -->
+      <div id="prof-dots" style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.75rem;">
+        <button onclick="goToSlide(0)" style="width:10px;height:10px;border-radius:50%;border:none;background:#F9A8D4;cursor:pointer;padding:0;transition:transform .2s,background .2s;"></button>
+        <button onclick="goToSlide(1)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.3);cursor:pointer;padding:0;transition:transform .2s,background .2s;"></button>
+        <button onclick="goToSlide(2)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.3);cursor:pointer;padding:0;transition:transform .2s,background .2s;"></button>
+        <button onclick="goToSlide(3)" style="width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.3);cursor:pointer;padding:0;transition:transform .2s,background .2s;"></button>
+      </div>
+
+      <!-- Texto da Carla -->
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:1.4rem 1.3rem;margin-bottom:1.5rem;backdrop-filter:blur(6px);">
+        <p style="color:#fff;font-size:1rem;font-weight:700;line-height:1.65;margin:0 0 1rem;">
+          👋 Oi, eu sou a <strong style="color:#F9A8D4;">Carla</strong> — comecei fazendo flores por hobbie, para presentear amigas e decorar minha própria casa.
+        </p>
+        <p style="color:#c9b8e8;font-size:.92rem;font-weight:600;line-height:1.65;margin:0 0 1rem;">
+          Quando percebi que as pessoas começaram a <strong style="color:#fff;">pedir para comprar</strong> meus arranjos, entendi que havia algo especial nisso. Hoje já ensinei mais de <strong style="color:#ffe600;">600 mulheres</strong> a criarem as próprias flores — e muitas transformaram isso em renda extra.
+        </p>
+        <p style="color:#c9b8e8;font-size:.92rem;font-weight:600;line-height:1.65;margin:0;">
+          Você <strong style="color:#fff;">não precisa ter experiência nenhuma</strong>. Eu vou te ensinar do zero, passo a passo, no seu ritmo. 🌸
+        </p>
+      </div>
+
+      <!-- Selos de confiança -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem;">
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:.9rem .75rem;text-align:center;">
+          <p style="font-size:1.6rem;margin:0 0 .2rem;">🎓</p>
+          <p style="color:#ffe600;font-size:1rem;font-weight:900;margin:0 0 .1rem;">+600</p>
+          <p style="color:#c9b8e8;font-size:.72rem;font-weight:700;margin:0;">alunas formadas</p>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:.9rem .75rem;text-align:center;">
+          <p style="font-size:1.6rem;margin:0 0 .2rem;">⭐</p>
+          <p style="color:#ffe600;font-size:1rem;font-weight:900;margin:0 0 .1rem;">4.9 / 5</p>
+          <p style="color:#c9b8e8;font-size:.72rem;font-weight:700;margin:0;">avaliação Hotmart</p>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:.9rem .75rem;text-align:center;">
+          <p style="font-size:1.6rem;margin:0 0 .2rem;">📱</p>
+          <p style="color:#ffe600;font-size:1rem;font-weight:900;margin:0 0 .1rem;">Instagram</p>
+          <p style="color:#c9b8e8;font-size:.72rem;font-weight:700;margin:0;">perfil verificado</p>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:.9rem .75rem;text-align:center;">
+          <p style="font-size:1.6rem;margin:0 0 .2rem;">🔒</p>
+          <p style="color:#ffe600;font-size:1rem;font-weight:900;margin:0 0 .1rem;">100% Seguro</p>
+          <p style="color:#c9b8e8;font-size:.72rem;font-weight:700;margin:0;">compra protegida</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Script do carrossel -->
+  <script>
+  (function(){
+    var cur = 0;
+    var total = 4;
+    var slides = document.getElementById('prof-slides');
+    var dots = document.getElementById('prof-dots').querySelectorAll('button');
+    var autoplay;
+
+    function updateCarousel(){
+      slides.style.transform = 'translateX(-' + (cur * 100) + '%)';
+      dots.forEach(function(d,i){
+        d.style.background = i === cur ? '#F9A8D4' : 'rgba(255,255,255,.3)';
+        d.style.transform  = i === cur ? 'scale(1.3)' : 'scale(1)';
+      });
+    }
+
+    window.moveCarousel = function(dir){
+      cur = (cur + dir + total) % total;
+      updateCarousel();
+      resetAutoplay();
+    };
+
+    window.goToSlide = function(idx){
+      cur = idx;
+      updateCarousel();
+      resetAutoplay();
+    };
+
+    function resetAutoplay(){
+      clearInterval(autoplay);
+      autoplay = setInterval(function(){ window.moveCarousel(1); }, 4000);
+    }
+
+    // Swipe touch
+    var startX = 0;
+    slides.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+    slides.addEventListener('touchend', function(e){
+      var diff = startX - e.changedTouches[0].clientX;
+      if(Math.abs(diff) > 40) window.moveCarousel(diff > 0 ? 1 : -1);
+    }, {passive:true});
+
+    resetAutoplay();
+  })();
+  </script>
 
   <!-- ══════════════════════════════════════════
        DEPOIMENTOS
@@ -1161,7 +1318,7 @@
           <li>Acesso vitalício (nunca expira)</li>
         </ul>
 
-        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" style="width:100%;display:block" onclick="trackCTA('price');return false;">
+        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" style="width:100%;display:block" onclick="trackCTA('price');">
           🛒 QUERO ME MATRICULAR — R$ 17,90
           <span class="price-tag">👆 Clique aqui e acesse na hora!</span>
         </a>
@@ -1248,7 +1405,7 @@
       </div>
 
       <div class="btn-wrapper" style="margin-top:2rem">
-        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" onclick="trackCTA('faq');return false;">
+        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" onclick="trackCTA('faq');">
           💜 SIM, QUERO ME MATRICULAR!
           <span class="price-tag">R$ 17,90 · Acesso imediato · Garantia 7 dias</span>
         </a>
@@ -1288,14 +1445,16 @@
 
     // ── Meta Pixel: InitiateCheckout ──
     function trackCTA(source) {
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'InitiateCheckout', {
-          content_name: 'Curso Chenille',
-          value: 17.90,
-          currency: 'BRL',
-          content_category: source
-        });
-      }
+      try {
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Curso Chenille',
+            value: 17.90,
+            currency: 'BRL',
+            content_category: source
+          });
+        }
+      } catch(e) { /* nunca bloqueia o clique */ }
     }
 
     // ── In-app browser (Instagram / Facebook): abre checkout diretamente ──
@@ -1322,6 +1481,66 @@
     })();
   </script>
 
+  <!-- ══ PROVA SOCIAL — TOAST DE COMPRA ══ -->
+  <div id="social-toast" style="
+    position:fixed;
+    bottom:90px;
+    left:16px;
+    z-index:9999;
+    background:#fff;
+    border-radius:14px;
+    padding:.75rem 1rem;
+    box-shadow:0 6px 28px rgba(0,0,0,.18);
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    max-width:280px;
+    border-left:4px solid #16A34A;
+    opacity:0;
+    transform:translateX(-110%);
+    transition:opacity .4s ease, transform .5s cubic-bezier(.34,1.56,.64,1);
+    pointer-events:none;
+  ">
+    <span style="font-size:1.8rem;line-height:1;">🌸</span>
+    <div>
+      <p id="toast-name" style="margin:0;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;color:#1F2937;"></p>
+      <p style="margin:0;font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:600;color:#16A34A;">acabou de se inscrever no curso ✅</p>
+      <p id="toast-time" style="margin:.1rem 0 0;font-family:'Nunito',sans-serif;font-size:.68rem;color:#9CA3AF;"></p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var nomes = [
+        'Maria G.','Ana Paula S.','Fernanda C.','Juliana M.','Rosane T.',
+        'Claudia B.','Patricia L.','Simone R.','Luciana F.','Andreia N.',
+        'Renata O.','Vanessa H.','Cláudia A.','Marlene V.','Eliane P.',
+        'Sandra K.','Beatriz Q.','Cristina W.','Débora J.','Edilaine Z.',
+        'Fátima D.','Gisele Y.','Helena X.','Irene U.','Joelma I.'
+      ];
+      var tempos = ['agora mesmo','há 2 min','há 5 min','há 8 min','há 12 min','há 15 min','há 20 min'];
+      var toast = document.getElementById('social-toast');
+      var nameEl = document.getElementById('toast-name');
+      var timeEl = document.getElementById('toast-time');
+
+      function showToast(){
+        nameEl.textContent = nomes[Math.floor(Math.random()*nomes.length)];
+        timeEl.textContent = tempos[Math.floor(Math.random()*tempos.length)];
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateX(0)';
+        setTimeout(function(){
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateX(-110%)';
+        }, 4000);
+      }
+
+      // Primeira notificação após 5s, depois a cada 20-35s
+      setTimeout(function(){
+        showToast();
+        setInterval(showToast, Math.random()*15000 + 20000);
+      }, 5000);
+    })();
+  </script>
 
 </body>
 </html>
