@@ -300,7 +300,52 @@
       font-weight: 600;
     }
 
-    /* ── SECTION BANNERS ── */
+    /* ── SECTION HEADERS (substitui banners coloridos) ── */
+    .sec-header { text-align: center; margin-bottom: 1.5rem; }
+    .sec-pill {
+      display: inline-block;
+      background: linear-gradient(135deg, #7C3AED, #EC4899);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 999px;
+      margin-bottom: .65rem;
+    }
+    .sec-pill-light {
+      display: inline-block;
+      background: rgba(124,58,237,.1);
+      color: #6D28D9;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 999px;
+      margin-bottom: .65rem;
+      border: 1.5px solid rgba(124,58,237,.2);
+    }
+    .sec-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: #1F2937;
+      margin: 0 0 .4rem;
+      line-height: 1.2;
+    }
+    .sec-title-light {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      font-weight: 900;
+      color: #fff;
+      margin: 0 0 .4rem;
+      line-height: 1.2;
+    }
+    .sec-sub { color: #6B7280; font-size: .9rem; font-weight: 600; margin: 0; }
+
+    /* ── SECTION BANNERS (legado — mantido para não quebrar nada) ── */
     .section-banner {
       color: #fff;
       font-size: 1rem;
@@ -316,6 +361,85 @@
     .banner-orange { background: linear-gradient(90deg, #C2410C, #EA580C); }
     .banner-purple { background: linear-gradient(90deg, #5B21B6, #7C3AED); }
     .banner-pink   { background: linear-gradient(90deg, #BE185D, #EC4899); }
+
+    /* ── MATERIAL CARD ── */
+    .material-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(109,40,217,.12);
+      border: 1.5px solid rgba(124,58,237,.1);
+    }
+    .material-img { width: 100%; display: block; }
+    .material-price-badge {
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+      margin: 1rem 1.25rem;
+    }
+    .material-bullets {
+      padding: .75rem 1.25rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .material-bullet {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: .88rem;
+      font-weight: 700;
+      color: #374151;
+    }
+    .bullet-icon {
+      width: 22px; height: 22px;
+      background: linear-gradient(135deg, #7C3AED, #EC4899);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: .65rem;
+      color: #fff;
+    }
+
+    /* ── FEATURE GRID ── */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+    .feature-card {
+      background: rgba(255,255,255,.06);
+      border: 1.5px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      padding: 1rem .85rem;
+      text-align: center;
+    }
+    .feature-card-icon { font-size: 1.5rem; margin-bottom: .3rem; }
+    .feature-card-val  { color: #F9A8D4; font-size: 1rem; font-weight: 900; margin: 0 0 .1rem; }
+    .feature-card-lbl  { color: #c9b8e8; font-size: .72rem; font-weight: 700; margin: 0; }
+
+    /* ── INCLUDES LIST ── */
+    .includes-list { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.5rem; }
+    .includes-item {
+      display: flex; align-items: center; gap: .75rem;
+      background: rgba(255,255,255,.06);
+      border: 1.5px solid rgba(255,255,255,.09);
+      border-radius: 12px;
+      padding: .75rem 1rem;
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .includes-icon {
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg,#7C3AED,#EC4899);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
 
     /* ── SECTIONS ── */
     .section {
@@ -941,9 +1065,6 @@
 
       <!-- ── VÍDEO TUTORIAL ── -->
       <div style="margin:0 auto 1.75rem;max-width:340px;text-align:center;">
-        <p style="display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.78rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;margin-bottom:.75rem;">
-          ▶ Veja como é fácil — faça sua primeira flor hoje
-        </p>
         <div style="border-radius:18px;overflow:hidden;border:3px solid rgba(255,255,255,.3);box-shadow:0 12px 40px rgba(0,0,0,.45);background:#000;">
           <div style="padding:56.25% 0 0 0;position:relative;">
             <iframe src="https://player.vimeo.com/video/1136581724?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" title="Fácil fazer"></iframe>
@@ -966,24 +1087,123 @@
   </section>
 
   <!-- ══════════════════════════════════════════
+       SEÇÃO — GALERIA DE TRABALHOS DAS ALUNAS
+  ══════════════════════════════════════════ -->
+  <style>
+    @keyframes marquee-left  { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    .marquee-track { display: flex; width: max-content; gap: .6rem; }
+    .marquee-row   { overflow: hidden; width: 100%; }
+    .marquee-row-1 .marquee-track { animation: marquee-left  28s linear infinite; }
+    .marquee-row-2 .marquee-track { animation: marquee-right 24s linear infinite; }
+    .marquee-card  {
+      position: relative; flex-shrink: 0;
+      width: 130px; height: 130px;
+      border-radius: 14px; overflow: hidden;
+      box-shadow: 0 4px 14px rgba(91,33,182,.2);
+    }
+    .marquee-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .marquee-card-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(45,16,104,.88), transparent);
+      padding: .4rem .5rem;
+    }
+    .marquee-card-info p { margin: 0; line-height: 1.25; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-row-1 .marquee-track,
+      .marquee-row-2 .marquee-track { animation: none; }
+    }
+  </style>
+
+  <section style="background:linear-gradient(180deg,#fff 0%,#f3eeff 100%);padding:2rem 0 2.25rem;">
+
+    <div style="text-align:center;padding:0 1rem;margin-bottom:1.25rem;">
+      <span style="display:inline-block;background:linear-gradient(135deg,#7C3AED,#EC4899);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;margin-bottom:.6rem;">
+        🌸 Feito pelas nossas alunas
+      </span>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(1.2rem,3.8vw,1.65rem);font-weight:900;color:#5B21B6;margin:0;line-height:1.2;">
+        Olha o que elas criaram!
+      </h2>
+      <p style="color:#6B7280;font-size:.88rem;font-weight:600;margin:.4rem 0 0;">
+        Sem experiência — só seguindo o passo a passo 💜
+      </p>
+    </div>
+
+    <!-- Fila 1 → esquerda -->
+    <div class="marquee-row marquee-row-1" style="margin-bottom:.6rem;">
+      <div class="marquee-track">
+        <!-- original -->
+        <div class="marquee-card"><img src="depoimentos/650246120_122128400691017629_1889997555647078091_n.jpg" alt="Ana Paula" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Ana Paula</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">São Paulo, SP</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/653703425_1484562296588255_5728810032197285615_n.jpg" alt="Maria Fernanda" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Maria Fernanda</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Belo Horizonte, MG</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/653706700_4707431526150886_8367996442360699532_n.jpg" alt="Juliana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Juliana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Fortaleza, CE</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/653830226_26181661348156063_5128937115474510267_n.jpg" alt="Patrícia" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Patrícia</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Campinas, SP</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/654214629_2127383158024709_5630818217263135311_n.jpg" alt="Vanessa" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Vanessa</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Recife, PE</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/654754587_3316423041869037_869786374255264075_n.jpg" alt="Rosana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Rosana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Curitiba, PR</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/buquegirassol.jpg" alt="Fernanda" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Fernanda</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Natal, RN</p></div></div>
+        <!-- duplicata para loop contínuo -->
+        <div class="marquee-card"><img src="depoimentos/650246120_122128400691017629_1889997555647078091_n.jpg" alt="Ana Paula" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Ana Paula</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">São Paulo, SP</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/653703425_1484562296588255_5728810032197285615_n.jpg" alt="Maria Fernanda" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Maria Fernanda</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Belo Horizonte, MG</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/653706700_4707431526150886_8367996442360699532_n.jpg" alt="Juliana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Juliana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Fortaleza, CE</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/653830226_26181661348156063_5128937115474510267_n.jpg" alt="Patrícia" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Patrícia</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Campinas, SP</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/654214629_2127383158024709_5630818217263135311_n.jpg" alt="Vanessa" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Vanessa</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Recife, PE</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/654754587_3316423041869037_869786374255264075_n.jpg" alt="Rosana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Rosana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Curitiba, PR</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/buquegirassol.jpg" alt="Fernanda" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Fernanda</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Natal, RN</p></div></div>
+      </div>
+    </div>
+
+    <!-- Fila 2 → direita -->
+    <div class="marquee-row marquee-row-2">
+      <div class="marquee-track">
+        <!-- original -->
+        <div class="marquee-card"><img src="depoimentos/654974117_26448087434825319_6765056871396359824_n.jpg" alt="Simone" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Simone</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Porto Alegre, RS</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/655697395_860314543740528_8832786580756484739_n.jpg" alt="Cláudia" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Cláudia</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Manaus, AM</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/655702861_1427582802193127_97521855453059604_n.jpg" alt="Débora" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Débora</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Goiânia, GO</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/656026028_26064101383217949_3378801386766036613_n.jpg" alt="Luciana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Luciana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Salvador, BA</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/656059879_837999539301988_3108871724466711886_n.jpg" alt="Adriana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Adriana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Belém, PA</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/658641336_122178601514789975_4744148014044561779_n.jpg" alt="Renata" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Renata</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Florianópolis, SC</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/mulherbuque.jpg" alt="Isabela" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Isabela</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Vitória, ES</p></div></div>
+        <!-- duplicata para loop contínuo -->
+        <div class="marquee-card"><img src="depoimentos/654974117_26448087434825319_6765056871396359824_n.jpg" alt="Simone" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Simone</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Porto Alegre, RS</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/655697395_860314543740528_8832786580756484739_n.jpg" alt="Cláudia" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Cláudia</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Manaus, AM</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/655702861_1427582802193127_97521855453059604_n.jpg" alt="Débora" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Débora</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Goiânia, GO</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/656026028_26064101383217949_3378801386766036613_n.jpg" alt="Luciana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Luciana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Salvador, BA</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/656059879_837999539301988_3108871724466711886_n.jpg" alt="Adriana" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Adriana</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Belém, PA</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/658641336_122178601514789975_4744148014044561779_n.jpg" alt="Renata" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Renata</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Florianópolis, SC</p></div></div>
+        <div class="marquee-card"><img src="depoimentos/mulherbuque.jpg" alt="Isabela" loading="lazy"><div class="marquee-card-info"><p style="color:#fff;font-size:.72rem;font-weight:800;">Isabela</p><p style="color:#F9A8D4;font-size:.63rem;font-weight:700;">Vitória, ES</p></div></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;padding:1.5rem 1rem 0;">
+      <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" onclick="trackCTA('galeria');">
+        🌸 QUERO APRENDER E CRIAR TAMBÉM!
+        <span class="price-tag">apenas R$ 17,90 — acesso imediato</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════
        SEÇÃO 1 — O QUE VOCÊ VAI APRENDER
   ══════════════════════════════════════════ -->
-  <section class="section" style="background:linear-gradient(180deg,#7C3AED 0%,#ffffff 18%);">
+  <section class="section" style="background:#fff;border-top:4px solid #7C3AED;">
     <div class="container">
-      <div class="section-banner banner-green">
-        Veja na prática como é simples Fazer 😊👇
+
+      <div class="sec-header" style="padding-top:.5rem;">
+        <div class="sec-pill">🎬 Veja na prática</div>
+        <h2 class="sec-title">Como é simples fazer! 😊</h2>
+        <p class="sec-sub">Mini-tutoriais de flores que você vai aprender no curso</p>
       </div>
 
-      <!-- VÍDEOS — substitua os src pelos seus vídeos reais (YouTube, Vimeo, etc.) -->
       <div class="video-grid">
         <div class="video-card">
-          <iframe src="https://player.vimeo.com/video/1172709267" allowfullscreen loading="lazy"></iframe>
+          <iframe data-src="https://player.vimeo.com/video/1172709267" allowfullscreen loading="lazy" class="lazy-iframe"></iframe>
         </div>
         <div class="video-card">
-          <iframe src="https://player.vimeo.com/video/1174130969" allowfullscreen loading="lazy"></iframe>
+          <iframe data-src="https://player.vimeo.com/video/1174130969" allowfullscreen loading="lazy" class="lazy-iframe"></iframe>
         </div>
         <div class="video-card">
-          <iframe src="https://player.vimeo.com/video/1172698411" allowfullscreen loading="lazy"></iframe>
+          <iframe data-src="https://player.vimeo.com/video/1172698411" allowfullscreen loading="lazy" class="lazy-iframe"></iframe>
         </div>
       </div>
 
@@ -999,54 +1219,58 @@
   <!-- ══════════════════════════════════════════
        SEÇÃO 2 — SEM EXPERIÊNCIA + MATERIAL BARATO
   ══════════════════════════════════════════ -->
-  <section class="section section-alt">
+  <section class="section" style="background:#FFF8F5;">
     <div class="container">
-      <div class="section-banner banner-red">
-        👉 Não precisa ter experiência — até crianças conseguem fazer 😊👇
+
+      <div class="sec-header">
+        <div class="sec-pill-light">👶 Qualquer pessoa aprende</div>
+        <h2 class="sec-title">Não precisa de experiência<br>— até crianças conseguem!</h2>
+        <p class="sec-sub">Passo a passo claro, como uma amiga te ensinando ao lado 💜</p>
       </div>
 
-      <div style="max-width:400px;margin:0 auto 1.5rem;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:1/1">
-        <iframe src="https://player.vimeo.com/video/1174143270" allowfullscreen loading="lazy" style="width:100%;height:100%;border:0;display:block"></iframe>
+      <div style="max-width:400px;margin:0 auto 2rem;border-radius:18px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 8px 24px rgba(124,58,237,.15);">
+        <iframe data-src="https://player.vimeo.com/video/1174143270" allowfullscreen loading="lazy" class="lazy-iframe" style="width:100%;height:100%;border:0;display:block"></iframe>
       </div>
 
+      <!-- MATERIAL CARD redesenhado -->
+      <div class="material-card">
 
-      <!-- MATERIAL SECTION -->
-      <div style="margin-top:2rem;background:linear-gradient(135deg,#1a0a2e 0%,#2d1b4e 60%,#3d2460 100%);border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(45,27,78,.45);">
-
-        <!-- Header -->
-        <div style="padding:1.4rem 1.5rem .8rem;text-align:center;">
-          <span style="display:inline-block;background:rgba(255,230,0,.15);color:#ffe600;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;border:1px solid rgba(255,230,0,.3);margin-bottom:.75rem;">
-            MATERIAL NECESSÁRIO
-          </span>
-          <h3 style="color:#fff;font-size:1.35rem;font-weight:800;margin:0 0 .3rem;line-height:1.2;">
-            Custo baixíssimo para começar
+        <!-- Topo do card -->
+        <div style="padding:1.25rem 1.25rem .75rem;text-align:center;">
+          <div class="sec-pill-light" style="margin-bottom:.5rem;">🧵 Material necessário</div>
+          <h3 style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:900;color:#1F2937;margin:0 0 .25rem;line-height:1.2;">
+            Comece com menos de R$&nbsp;20
           </h3>
-          <p style="color:#c9b8e8;font-size:.88rem;margin:0;">
-            Tudo que você precisa cabe no bolso — literalmente.
+          <p style="color:#6B7280;font-size:.85rem;font-weight:600;margin:0;">
+            Tudo que você precisa cabe na palma da mão
           </p>
         </div>
 
-        <!-- Image -->
-        <div style="padding:0 1.2rem;">
-          <img src="precomaterial.png" alt="Material utilizado no curso" loading="lazy"
-               style="width:100%;border-radius:12px;display:block;box-shadow:0 4px 20px rgba(0,0,0,.4);" />
+        <!-- Imagem do material -->
+        <div style="padding:0 1.25rem;">
+          <img src="precomaterial.png" alt="Material utilizado no curso" loading="lazy" style="width:100%;max-width:280px;display:block;margin:0 auto;border-radius:10px;" />
         </div>
 
-        <!-- Custo destaque -->
-        <div style="margin:1rem 1.2rem 0;background:linear-gradient(135deg,#ffe600,#ffb300);border-radius:14px;padding:1rem 1.2rem;text-align:center;">
-          <p style="margin:0 0 .15rem;font-size:.75rem;font-weight:800;color:#1a0a2e;letter-spacing:.08em;text-transform:uppercase;">💰 Investimento no material</p>
-          <p style="margin:0;font-size:2rem;font-weight:900;color:#1a0a2e;line-height:1.1;">Menos de <span style="font-size:2.5rem;">R$20</span></p>
-          <p style="margin:.2rem 0 0;font-size:.82rem;font-weight:700;color:#3d2400;">para começar a criar suas primeiras flores!</p>
+        <!-- Badge de preço -->
+        <div class="material-price-badge" style="margin:.85rem 1.25rem;">
+          <p style="margin:0 0 .1rem;font-size:.65rem;font-weight:800;color:rgba(255,255,255,.75);letter-spacing:.1em;text-transform:uppercase;">💰 Investimento total no material</p>
+          <p style="margin:0;font-size:1.4rem;font-weight:900;color:#fff;line-height:1.2;">Menos de <span style="color:#FDE68A;">R$&nbsp;20</span></p>
+          <p style="margin:.15rem 0 0;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.8);">para criar suas primeiras flores!</p>
         </div>
 
         <!-- Bullets -->
-        <div style="padding:1.1rem 1.2rem 1.5rem;display:flex;flex-direction:column;gap:.6rem;">
-          <div style="display:flex;align-items:center;gap:.7rem;color:#e0d4f7;font-size:.88rem;">
-            <span style="color:#4ade80;font-size:1rem;flex-shrink:0;">✔</span> Rende mais de 15 flores
+        <div class="material-bullets">
+          <div class="material-bullet">
+            <div class="bullet-icon">✔</div>
+            Um pacote rende mais de <strong>15 flores</strong>
           </div>
-          <div style="display:flex;align-items:center;gap:.7rem;color:#e0d4f7;font-size:.88rem;">
-            <span style="color:#4ade80;font-size:1rem;flex-shrink:0;">✔</span> Flores que duram <strong style="color:#fff;">anos</strong> sem murchar
+          <div class="material-bullet">
+            <div class="bullet-icon">✔</div>
+            Flores que duram <strong>anos</strong> — nunca murcham
           </div>
+          <div class="material-bullet">
+            <div class="bullet-icon">✔</div>
+            Encontra em qualquer <strong>papelaria ou internet</strong>
           </div>
         </div>
 
@@ -1058,45 +1282,54 @@
 <!-- ══════════════════════════════════════════
        SEÇÃO 4 — O QUE VOCÊ VAI RECEBER
   ══════════════════════════════════════════ -->
-  <section style="background:#2d1b4e;padding:2.5rem 1rem;">
-    <div style="max-width:480px;margin:0 auto;text-align:center;">
-      <div class="section-banner banner-purple" style="margin-bottom:1.5rem;">
-        😊👇 Veja tudo que você vai receber ao se matricular 😊👇
+  <section style="background:linear-gradient(160deg,#0D0621 0%,#2D1068 100%);padding:2.5rem 1rem;">
+    <div style="max-width:480px;margin:0 auto;">
+
+      <div class="sec-header">
+        <div style="display:inline-block;background:rgba(249,168,212,.15);color:#F9A8D4;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;border:1.5px solid rgba(249,168,212,.25);margin-bottom:.65rem;">
+          🎁 Tudo que você recebe
+        </div>
+        <h2 class="sec-title-light">Tudo isso por apenas<br><span style="color:#FDE68A;">R$&nbsp;17,90</span></h2>
+        <p style="color:rgba(255,255,255,.65);font-size:.88rem;font-weight:600;margin:0;">Acesso imediato após o pagamento · Pague uma vez, use para sempre</p>
       </div>
 
       <img src="apresentacaoprodutoo.png" alt="Apresentação do produto" loading="lazy"
-           style="width:100%;max-width:400px;border-radius:16px;display:block;margin:0 auto 1.5rem;" />
+           style="width:100%;max-width:400px;border-radius:16px;display:block;margin:0 auto 1.75rem;box-shadow:0 8px 32px rgba(0,0,0,.4);" />
 
-      <p style="color:#fff;font-size:.85rem;font-weight:600;margin:0 0 .3rem;letter-spacing:.05em;text-transform:uppercase;">
-        ACESSE AGORA POR APENAS
-      </p>
-      <p style="color:#ffe600;font-size:2.4rem;font-weight:800;margin:0 0 .4rem;line-height:1.1;">
-        R$ 17,90
-      </p>
-      <p style="color:#e0d4f7;font-size:.82rem;margin:0 0 2rem;">
-        acesso imediato após o pagamento da matrícula
-      </p>
-
-      <div style="display:flex;flex-direction:column;gap:.75rem;align-items:center;width:100%;">
-        <div style="background:#3d2460;border-radius:12px;padding:.85rem 1.2rem;width:100%;max-width:400px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;">
-          ✅ 50+ vídeo-aulas passo a passo
+      <div class="includes-list">
+        <div class="includes-item">
+          <div class="includes-icon">🎬</div>
+          50+ vídeo-aulas passo a passo
         </div>
-        <div style="background:#3d2460;border-radius:12px;padding:.85rem 1.2rem;width:100%;max-width:400px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;">
-          ✅ Lista de materiais e onde comprar
+        <div class="includes-item">
+          <div class="includes-icon">🌸</div>
+          Flores, buquês, jarrinhos e muito mais
         </div>
-        <div style="background:#3d2460;border-radius:12px;padding:.85rem 1.2rem;width:100%;max-width:400px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;">
-          ✅ Aprenda flores, buquês e jarrinhos
+        <div class="includes-item">
+          <div class="includes-icon">🛒</div>
+          Lista de materiais e onde comprar
         </div>
-        <div style="background:#3d2460;border-radius:12px;padding:.85rem 1.2rem;width:100%;max-width:400px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;">
-          ✅ Diploma digital de conclusão
+        <div class="includes-item">
+          <div class="includes-icon">🎓</div>
+          Diploma digital de conclusão
         </div>
-        <div style="background:#3d2460;border-radius:12px;padding:.85rem 1.2rem;width:100%;max-width:400px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;">
-          ✅ Grupo exclusivo no WhatsApp
+        <div class="includes-item">
+          <div class="includes-icon">💬</div>
+          Grupo exclusivo no WhatsApp
         </div>
-        <div style="background:#3d2460;border-radius:12px;padding:.85rem 1.2rem;width:100%;max-width:400px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;">
-          ✅ Acesso vitalício — nunca expira
+        <div class="includes-item">
+          <div class="includes-icon">♾️</div>
+          Acesso vitalício — nunca expira
         </div>
       </div>
+
+      <div class="btn-wrapper">
+        <a href="https://pay.hotmart.com/A103851615O?checkoutMode=2" class="btn-cta hotmart-fb hotmart__button-checkout" onclick="trackCTA('recebe');">
+          🌸 QUERO TUDO ISSO AGORA!
+          <span class="price-tag">R$ 17,90 — acesso vitalício</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -1241,10 +1474,12 @@
   <!-- ══════════════════════════════════════════
        DEPOIMENTOS
   ══════════════════════════════════════════ -->
-  <section class="section section-alt">
+  <section class="section" style="background:#FFF8F5;">
     <div class="container">
-      <div class="section-banner banner-pink">
-        ❤️ O que nossas alunas estão falando 😊👇
+      <div class="sec-header">
+        <div class="sec-pill">❤️ Depoimentos reais</div>
+        <h2 class="sec-title">O que nossas alunas estão falando</h2>
+        <p class="sec-sub">Resultados de quem seguiu o passo a passo do curso 💜</p>
       </div>
 
       <div class="testimonials-grid">
@@ -1310,7 +1545,12 @@
   ══════════════════════════════════════════ -->
   <section class="price-section" id="matricula">
     <div class="container">
-      <h2>😊👇 Faça sua matrícula e torne-se aluna agora mesmo 😊👇</h2>
+      <div class="sec-header">
+        <div style="display:inline-block;background:rgba(249,168,212,.15);color:#F9A8D4;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;border:1.5px solid rgba(249,168,212,.25);margin-bottom:.65rem;">
+          🎓 Faça sua matrícula
+        </div>
+      </div>
+      <h2>Torne-se aluna agora mesmo 🌸</h2>
 
       <div class="price-box">
         <div class="price-from">TUDO ISSO POR APENAS</div>
@@ -1552,5 +1792,31 @@
   </script>
 
   <script src="https://player.vimeo.com/api/player.js"></script>
+
+  <!-- ── LAZY LOAD IFRAMES (IntersectionObserver) ── -->
+  <script>
+    (function(){
+      if (!('IntersectionObserver' in window)) {
+        // fallback: carrega todos imediatamente
+        document.querySelectorAll('.lazy-iframe[data-src]').forEach(function(el){
+          el.src = el.getAttribute('data-src');
+        });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            var el = entry.target;
+            el.src = el.getAttribute('data-src');
+            observer.unobserve(el);
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      document.querySelectorAll('.lazy-iframe[data-src]').forEach(function(el){
+        observer.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>
